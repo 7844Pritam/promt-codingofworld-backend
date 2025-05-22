@@ -2,9 +2,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 
-// Signup function
 const signup = async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password } = req.body; 
 
   if (!username || !email || !password) {
     return res.status(400).json({
@@ -88,7 +87,6 @@ const signup = async (req, res) => {
   }
 };
 
-// Login function
 const login = async (req, res) => {
   const { email, password } = req.body;
 

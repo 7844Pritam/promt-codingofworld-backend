@@ -9,7 +9,7 @@ const {
 const  protect  = require("../middleware/authMiddleware");
 
 router.post("/", protect, createPrompt);
-router.get("/",protect, getPrompts);
+router.get("/", getPrompts);
 router.get("/category/:id", getPromptByCategory);
 
 module.exports = router;

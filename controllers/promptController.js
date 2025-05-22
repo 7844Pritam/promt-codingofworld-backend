@@ -1,8 +1,6 @@
 const Prompt = require("../models/Prompt");
 
-// Create a new prompt
 
-// Create a new prompt
 const createPrompt = async (req, res) => {
   const { title, content, category } = req.body;
 
@@ -14,7 +12,6 @@ const createPrompt = async (req, res) => {
       });
     }
 
-    // ✅ Check permission
     if (!req.user.canCreatePrompt) {
       return res.status(403).json({
         success: false,
