@@ -7,11 +7,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors({
-  origin: 'https://promt-codingofworld.vercel.app',
-  credentials: true
-}));
-
+app.use(cors());
 app.use(express.json());
 
 // Routes

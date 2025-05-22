@@ -1,11 +1,9 @@
 const User = require("../models/user");
 
-// ✅ Change user role (user <-> admin)
 const changeUserRole = async (req, res) => {
   const { userId } = req.params;
   const { role } = req.body || {};
 
-  // Validate input
   if (!role) {
     return res.status(400).json({
       success: false,
